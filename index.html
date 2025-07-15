@@ -10,13 +10,31 @@
     .anime {
       position: relative;
       width: 100%;
-      height: 9cm;
+      height: 14cm;
       background: url('WhatsApp Image 2025-07-15 at 07.57.56.jpeg') center center/cover no-repeat;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background-image 1s ease-in-out;
+      transition: background-image 2s ease-in-out;
+    }
+    /* Slideshow fade animation for images in .container2 */
+    .container2 .slideshow-img {
+      opacity: 1;
+      transition: opacity 1.5s ease;
+      position: absolute;
+      left: 0; top: 0; width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .container2 .slideshow-img.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .container2 .slideshow-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
     }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,7 +42,8 @@
     }
     .hero {
       background: url('https://yourimage.url/hero-graduation.jpg') center center/cover no-repeat;
-      height: 400px;
+      height:17cm;
+      margin: top 1px;;
       
       color: white;
       display: flex;
@@ -70,6 +89,24 @@
     .col-md-6{
       color: #eee;
     }
+    .courses{
+      display: flex;
+    }
+    .col-md-5{
+      display: block;
+      width: 12cm;
+      height: 7cm;
+      margin-right: 1cm;
+      margin-bottom: 2cm;
+     
+   
+    }
+    .container2{
+      margin-right: 1cm;
+      margin-left: 1cm;
+       margin-top: 0.1cm;
+      
+    }
   </style>
 </head>
 <body>
@@ -82,14 +119,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">CPD</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Admission</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Referral</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://clips-student-portal.vercel.app/">Student Potal</a></li>
+          <li class="nav-item" style="color: rgb(227, 7, 143);"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item" style="color: rgb(3, 187, 43);"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item" style="color: rgb(227, 44, 7);"><a class="nav-link" href="#">Courses</a></li>
+          <li class="nav-item" style="color: rgb(253, 251, 252);"><a class="nav-link" href="#">CPD</a></li>
+          <li class="nav-item" style="color: rgb(227, 7, 143);"><a class="nav-link" href="#">Admission</a></li>
+          <li class="nav-item" style="color: rgb(22, 201, 6);"><a class="nav-link" href="#">Referral</a></li>
+          <li class="nav-item" style="color: rgb(227, 7, 143);"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item" style="color: rgb(7, 227, 66);"><a class="nav-link" href="https://clips-student-portal.vercel.app/">Student Potal</a></li>
           <li class="nav-item"><a class="btn btn-warning" href="#">Apply Now</a></li>
         </ul>
       </div>
@@ -106,17 +143,61 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="container hero-content">
-     <div class="anime"> 
+    <div class="anime"> 
       <h1 class="display-4 fw-bold">INNOVATE YOUR TOMORROW</h1>
     </div> 
-      <a href="#" class="btn btn-warning btn-lg mt-3">OUR COURSE</a>
+    <a href="#" class="btn btn-warning btn-lg mt-3">OUR COURSE</a>
+    
+        </div>
     </div>
   </section>
-
+<div class="container2" style="position:relative;z-index:2;margin-top:2cm;">
+<div class="cuorse" style="margin-top:0;">
+    <div class="d-flex flex-wrap gap-3 justify-content-center my-4">
+      <div class="col-md-5" style=" height:11cm;width:8cm;color:rgb(237, 12, 12);position:relative;">
+        <i class="fas fa-users"></i>
+        <div class="slideshow-wrapper">
+          <img src="WhatsApp Image 2025-07-15 at 07.22.32.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img" />
+          <img src="WhatsApp Image 2025-07-15 at 07.52.15.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
+          <img src="WhatsApp Image 2025-07-15 at 07.52.16.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
+        </div>
+        <h5 class="mt-2" style="color: rgba(225, 245, 2, 0.954);">Hairdressing</h5>
+        <p style="color: rgb(227, 7, 143);">
+          Hairdressing teaches styling, cutting, coloring, and hair care techniques for professional salon careers.
+        </p>
+      </div>
+      <div class="col-md-5" style="height:8cm;width:9cm;color:rgb(202, 11, 11);position:relative;">
+        <i class="fas fa-users"></i>
+        <div class="slideshow-wrapper">
+          <img src="WhatsApp Image 2025-07-15 at 07.22.34.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img" />
+          <img src="WhatsApp Image 2025-07-15 at 07.22.32.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
+          <img src="WhatsApp Image 2025-07-15 at 07.57.56(1).jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
+        </div>
+        <div><h5 class="mt-2" style="color: white;">COMPUTER OPERATOR</h5>
+        <p style="color: rgb(144, 4, 132);">equips learners with practical skills in managing computer systems and performing routine IT tasks. 
+          Students learn how to handle data entry, 
+          troubleshoot basic hardware/software issues,
+           and monitor system performance. The course also covers office applications,file management, and printing operations. It prepares graduates for roles in IT support, administrative offices, and data processing centers.</p>
+        </div>
+        
+      </div>
+      <div class="col-md-5" style="height:8cm;width:9cm;color:rgb(222, 6, 6);position:relative;">
+        <i class="fas fa-users"></i>
+        <div class="slideshow-wrapper">
+          <img src="WhatsApp Image 2025-07-15 at 02.39.44.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img" />
+          <img src="WhatsApp Image 2025-07-15 at 07.39.36.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
+          <img src="WhatsApp Image 2025-07-15 at 07.39.37.jpeg " alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
+        </div>
+        <h5 class="mt-2" style="color: rgb(6, 223, 42);">CERTIFIED NURSING ASSISTANT </h5>
+        <p style="color: rgb(176, 62, 5);"> It trains students in hygiene assistance, mobility support, and vital signs monitoring.
+Learners gain hands-on experience in hospitals, elderly homes, and clinics.
+The course prepares graduates for direct entry into caregiving and nursing support roles.</p>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Features -->
-  <section class="py-5 bg-light text-center">
+  <section class="py-5 bg-light text-center" style="margin-top:3cm;">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
@@ -218,6 +299,16 @@
     setInterval(showNextAnimeImage, 4000); // Change every 4 seconds
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('.anime').style.backgroundImage = `url('${animeImages[0]}')`;
+      // Slideshow for images in each .slideshow-wrapper (slow and smooth)
+      document.querySelectorAll('.container2 .slideshow-wrapper').forEach(function(wrapper) {
+        const slides = wrapper.querySelectorAll('.slideshow-img');
+        let current = 0;
+        setInterval(function() {
+          slides[current].classList.add('hide');
+          current = (current + 1) % slides.length;
+          slides[current].classList.remove('hide');
+        }, 4000); // Change every 4 seconds
+      });
     });
   </script>
 </body>
