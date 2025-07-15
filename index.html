@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLIPS TECHNICAL COLLEGE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    .anime {
+      position: relative;
+      width: 100%;
+      height: 9cm;
+      background: url('WhatsApp Image 2025-07-15 at 07.57.56.jpeg') center center/cover no-repeat;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-image 1s ease-in-out;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(36, 36, 95);
+    }
+    .hero {
+      background: url('https://yourimage.url/hero-graduation.jpg') center center/cover no-repeat;
+      height: 400px;
+      
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .features i {
+      font-size: 2rem;
+      color: #ffc107;
+    }
+    .course-card {
+      border: 1px solid #eee;
+      padding: 1rem;
+      border-radius: 8px;
+      height: 100%;
+    }
+    .mission, .vision, .core-values {
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .mission { background-color: #f8f9fa; }
+    .vision { background-color: #8B0000; color: white; }
+    .core-values { background-color: #f8f9fa; }
+    .news-item {
+      background: #fdfdfd;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+    .col-md-6{
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">CLIPS TECHNICAL COLLEGE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CPD</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Admission</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Referral</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://clips-student-portal.vercel.app/">Student Potal</a></li>
+          <li class="nav-item"><a class="btn btn-warning" href="#">Apply Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Social/Contact Bar -->
+  <div class="bg-light py-2 border-bottom" style="display:flex;align-items:center;justify-content:center;gap:2rem;">
+    <a href="#" id="facebook-link" class="text-dark" style="font-size:1.5rem;"><i class="fab fa-facebook"></i></a>
+    <a href="#" id="twitter-link" class="text-dark" style="font-size:1.5rem;"><i class="fab fa-twitter"></i></a>
+    <a href="#" id="youtube-link" class="text-dark" style="font-size:1.5rem;"><i class="fab fa-youtube"></i></a>
+    <a href="mailto:info@yourcollege.com" class="text-dark" style="font-size:1.5rem;"><i class="fas fa-envelope"></i></a>
+    <span style="font-size:1.1rem;"><i class="fas fa-phone"></i> +254 700 000 000</span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+     <div class="anime"> 
+      <h1 class="display-4 fw-bold">INNOVATE YOUR TOMORROW</h1>
+    </div> 
+      <a href="#" class="btn btn-warning btn-lg mt-3">OUR COURSE</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <i class="fas fa-users"></i>
+          <img src="WhatsApp Image 2025-07-15 at 02.32.44.jpeg" alt="Training Effective Workforce" class="img-fluid rounded" />
+          <h5 class="mt-2">Training Effective Workforce With Integrity</h5>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-globe"></i>
+           <img src="WhatsApp Image 2025-07-15 at 02.36.14.jpeg" alt="Offering Internationally Recognized Course" class="img-fluid rounded" />
+          <h5 class="mt-2">Offering Internationally Recognized Course</h5>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-briefcase"></i>
+          <img src="WhatsApp Image 2025-07-15 at 02.39.44.jpeg" alt="Preparing Students For The Workplace" class="img-fluid rounded" />
+          <h5 class="mt-2">Preparing Students To The Workplace</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="container py-5">
+    <h4 class="text-center mb-4 text-danger">EXPLORE OUR FEATURED COURSES</h4>
+    <div class="row g-4">
+      <!-- Course Cards (4) -->
+      <!-- Content is unchanged -->
+    </div>
+  </section>
+
+  <!-- About / Vision / Mission -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="WhatsApp Image 2025-07-15 at 07.57.56.jpeg" alt="Campus" class="img-fluid rounded" />
+      </div>
+      <div class="col-md-6">
+        <h3>Empowering Minds, Inspiring Futures</h3>
+        <p>CLIPS TECHNICAL COLLEGE provides opportunities for accessible, high-quality training and global linkages through technical and academic excellence.</p>
+        <a href="#" class="btn btn-outline-danger">Read More</a>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <!-- Mission, Vision, Core Values Cards -->
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="container py-5">
+    <h4 class="text-danger">NEWS & ANNOUNCEMENTS</h4>
+    <h2 class="mb-4">Read Our Latest News</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="news-item">
+          <h6>July Intake Is Open For Registration</h6>
+          <p>The July intake is now open for registration! Don’t miss this opportunity to advance your...</p>
+          <small>July 1,&middot; 2 Comments</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="news-item">
+          <h6>Unlock Your Inner Tech Superhero</h6>
+          <p>Did you know? Software engineering is like solving modern-day problems...</p>
+          <small>May 26, 2025 &middot; No Comments</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="news-item">
+          <h6>Expanding Healthcare Training At CLIPS TECHNICAL COLLEGE</h6>
+          <p>We are proud to announce the enhancement of our healthcare training programs...</p>
+          <small>May 1, 2025 &middot; No Comments</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 CLIPS TECHNICAL COLLEGE. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Slideshow for .anime container
+    const animeImages = [
+      'WhatsApp Image 2025-07-15 at 07.57.56.jpeg',
+      'WhatsApp Image 2025-07-15 at 07.57.56(1).jpeg',
+      'WhatsApp Image 2025-07-15 at 07.57.57.jpeg',
+      'WhatsApp Image 2025-07-15 at 07.57.57(1).jpeg',
+      'WhatsApp Image 2025-07-15 at 07.57.58.jpeg',
+      'WhatsApp Image 2025-07-15 at 07.57.58(1).jpeg'
+    ];
+    let animeCurrent = 0;
+    function showNextAnimeImage() {
+      animeCurrent = (animeCurrent + 1) % animeImages.length;
+      document.querySelector('.anime').style.backgroundImage = `url('${animeImages[animeCurrent]}')`;
+    }
+    setInterval(showNextAnimeImage, 4000); // Change every 4 seconds
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.anime').style.backgroundImage = `url('${animeImages[0]}')`;
+    });
+  </script>
+</body>
+</html>
