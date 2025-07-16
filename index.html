@@ -1,3 +1,4 @@
+    /* typewriter-bg styles removed */
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,8 +150,8 @@
   <!-- Hero -->
   <section class="hero">
     <div class="anime"> 
-      <h1 class="display-4 fw-bold">INNOVATE YOUR TOMORROW</h1>
-    </div> 
+      <h1 class="display-4 fw-bold" id="hero-typewriter"></h1>
+    </div>
     <a href="course.html" class="btn btn-warning btn-lg mt-3">CLICK TO VIEW COURSES</a>
     </div>
   </section>
@@ -353,23 +354,66 @@ The course prepares graduates for direct entry into caregiving and nursing suppo
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Slideshow for .anime container
+    // Slideshow for .anime container with typewriter effect
     const animeImages = [
-      'WhatsApp Image 2025-07-15 at 07.57.56.jpeg',
+      'WhatsApp Image 2025-07-16 at 20.52.39.jpeg',
       'WhatsApp Image 2025-07-15 at 07.57.56(1).jpeg',
-      'WhatsApp Image 2025-07-15 at 07.57.57.jpeg',
-      'WhatsApp Image 2025-07-15 at 07.57.57(1).jpeg',
-      'WhatsApp Image 2025-07-15 at 07.57.58.jpeg',
-      'WhatsApp Image 2025-07-15 at 07.57.58(1).jpeg'
+      'WhatsApp Image 2025-07-16 at 20.44.59.jpeg',
+     
+    ];
+    // Sentences for the first three images
+    const heroSentences = [
+      'DEVELOP CHARACTER, SKILLS AND COMPITENCY',
+      'DISCOVER YOUR PASSION AND PERSUE YOUR DREAM',
+      'INNOVATE YOUR TOMMOROW'
     ];
     let animeCurrent = 0;
-    function showNextAnimeImage() {
+    let typewriterTimeout;
+    function typeWriterEffect(sentence, element, cb) {
+      let i = 0;
+      function type() {
+        if (i <= sentence.length) {
+          element.textContent = sentence.slice(0, i);
+          i++;
+          typewriterTimeout = setTimeout(type, 50);
+        } else if (cb) {
+          cb();
+        }
+      }
+      type();
+    }
+    function clearTypewriter(element, cb) {
+      let text = element.textContent;
+      let i = text.length;
+      function erase() {
+        if (i >= 0) {
+          element.textContent = text.slice(0, i);
+          i--;
+          typewriterTimeout = setTimeout(erase, 15);
+        } else if (cb) {
+          cb();
+        }
+      }
+      erase();
+    }
+    function showNextAnimeImageAndText() {
       animeCurrent = (animeCurrent + 1) % animeImages.length;
       document.querySelector('.anime').style.backgroundImage = `url('${animeImages[animeCurrent]}')`;
+      const typewriter = document.getElementById('hero-typewriter');
+      // Only type for the first three images, else clear
+      if (animeCurrent < 3) {
+        clearTypewriter(typewriter, function() {
+          typeWriterEffect(heroSentences[animeCurrent], typewriter);
+        });
+      } else {
+        clearTypewriter(typewriter);
+      }
     }
-    setInterval(showNextAnimeImage, 4000); // Change every 4 seconds
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('.anime').style.backgroundImage = `url('${animeImages[0]}')`;
+      const typewriter = document.getElementById('hero-typewriter');
+      typeWriterEffect(heroSentences[0], typewriter);
+      setInterval(showNextAnimeImageAndText, 4000); // Change every 4 seconds
       // Slideshow for images in each .slideshow-wrapper (slow and smooth)
       document.querySelectorAll('.container2 .slideshow-wrapper').forEach(function(wrapper) {
         const slides = wrapper.querySelectorAll('.slideshow-img');
