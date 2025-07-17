@@ -1,4 +1,4 @@
-    /* typewriter-bg styles removed */
+/* typewriter-bg styles removed */
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +8,147 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
+    .quote-flex-row {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto 30px auto;
+      flex-wrap: wrap;
+    }
+    /* NIBS-style Navbar Styles */
+    .nibs-navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 19px 24px;
+      background-color: transparent;
+    .nibs-nav-item-container {
+      background: #ec0303;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin: 0 10px;
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .nibs-nav-item-container:hover {
+      background: #e40404;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+    @media (max-width: 900px) {
+      .nibs-nav-item-container {
+        margin: 8px 0;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+      border-bottom: 1px solid #e7e7e7;
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+    }
+    .nibs-nav-item {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: color 0.2s;
+    }
+    .nibs-nav-item:hover {
+      color: #0066cc;
+    }
+    .nibs-nav-left {
+      display: flex;
+      gap: 20px;
+    }
+    .nibs-nav-right {
+      display: flex;
+      gap: 20px;
+    }
+    .founder-quote-container, .principal-quote-container {
+      flex: 1 1 350px;
+      max-width: 50%;
+      background: #080221;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(16, 1, 34, 0.07);
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+    }
+    @media (max-width: 900px) {
+      .quote-flex-row {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .founder-quote-container, .principal-quote-container {
+        max-width: 120px;
+        max-height: 120px;
+      }
+      .nibs-navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5px;
+      }
+      .nibs-nav-left, .nibs-nav-right {
+        gap: 10px;
+      }
+    }
+    /* Founder Quote Styles */
+    .founder-quote-container {
+      max-width: 400px;
+      margin: 0 auto 30px auto;
+      text-align: center;
+    }
+    .principal-quote-container {
+      max-width: 400px;
+      margin: 0 auto 30px auto;
+      text-align: center;
+    }
+    .founder-profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+    }
+    .founder-quote {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 18px;
+      color: #fefbfe;
+      line-height: 1.6;
+    }
+    .founder-quote-mark {
+      font-size: 38px;
+      font-weight: bold;
+      color: #f6f3f6;
+      display: block;
+      margin-bottom: -18px;
+    }
+    .founder-signature {
+      font-family: 'Georgia', serif;
+      font-size: 9px;
+      font-style: italic;
+      margin-top: 16px;
+      color: #800080;
+    }
+    .founder-title {
+      font-size: 13px;
+      font-weight: bold;
+      color: #C71585;
+      margin-top: 2px;
+    }
     .anime {
       position: relative;
       width: 100%;
@@ -39,7 +180,7 @@
     }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: rgb(36, 36, 95);
+      background-color: rgb(1, 1, 57);
     }
     .hero {
       background: url('https://yourimage.url/hero-graduation.jpg') center center/cover no-repeat;
@@ -108,6 +249,39 @@
        margin-top: 0.1cm;
       
     }
+    /* NIBS-style Navbar */
+    .nibs-navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background-color: #080117;
+      border-bottom: 1px solid #e7e7e7;
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+    }
+    .nibs-nav-item {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: color 0.2s;
+    }
+    .nibs-nav-item:hover {
+      color: #0066cc;
+    }
+    .nibs-nav-left {
+      display: flex;
+      gap: 20px;
+    }
+    .nibs-nav-right {
+      display: flex;
+      gap: 20px;
+    }
   </style>
 </head>
 <body>
@@ -126,9 +300,9 @@
           <li class="nav-item" style="color: rgb(227, 7, 143);"><a class="nav-link" href="#">Home</a></li>
           <li class="nav-item" style="color: rgb(3, 187, 43);"><a class="nav-link" href="course.html">About Us</a></li>
           <li class="nav-item" style="color: rgb(227, 44, 7);"><a class="nav-link" href="course.html">Courses</a></li>
-          <li class="nav-item" style="color: rgb(253, 251, 252);"><a class="nav-link" href="#">CPD</a></li>
-          <li class="nav-item" style="color: rgb(227, 7, 143);"><a class="nav-link" href="#">Admission</a></li>
-          <li class="nav-item" style="color: rgb(22, 201, 6);"><a class="nav-link" href="#">Referral</a></li>
+          <li class="nav-item" style="color: rgb(253, 251, 252);"><a class="nav-link" href="course.html">CPD</a></li>
+          <li class="nav-item" style="color: rgb(227, 7, 143);"><a class="nav-link" href="https://forms.gle/CUsguHYq5a3A44C69">Admission</a></li>
+          <li class="nav-item" style="color: rgb(22, 201, 6);"><a class="nav-link" href="course.html">Referral</a></li>
           <li class="nav-item" style="color: rgb(227, 7, 143);"><a class="nav-link" href="https://wa.me/254725449122">Contact</a></li>
           <li class="nav-item" style="color: rgb(7, 227, 66);"><a class="nav-link" href="https://clips-student-portal.vercel.app/">Student Potal</a></li>
           <li class="nav-item"><a class="btn btn-warning" href="https://forms.gle/CUsguHYq5a3A44C69">Apply Now</a></li>
@@ -150,11 +324,50 @@
   <!-- Hero -->
   <section class="hero">
     <div class="anime"> 
+
       <h1 class="display-4 fw-bold" id="hero-typewriter"></h1>
+      <!-- NIBS-style Navbar (original style, bottom of hero background) -->
+      <nav class="nibs-navbar">
+        <div class="nibs-nav-left">
+          <div class="nibs-nav-item-container"><a href="#" class="nibs-nav-item">campuses</a></div>
+        </div>
+        <div class="nibs-nav-right">
+          <div class="nibs-nav-item-container"><a href="https://forms.gle/CUsguHYq5a3A44C69" class="nibs-nav-item">join clips</a></div>
+          <div class="nibs-nav-item-container"><a href="course.html" class="nibs-nav-item">student life</a></div>
+          <div class="nibs-nav-item-container"><a href="#" class="nibs-nav-item">downloads</a></div>
+        </div>
+        </div>
+      </nav>
     </div>
     <a href="course.html" class="btn btn-warning btn-lg mt-3">CLICK TO VIEW COURSES</a>
-    </div>
   </section>
+
+  <!-- Founder Quote Section (moved below hero) -->
+  <div class="quote-flex-row">
+    <div class="founder-quote-container">
+      <img src="WhatsApp Image 2025-07-17 at 07.35.22.jpeg" alt="Felix Otieno Ngige" class="founder-profile-img">
+      <div class="founder-quote-mark">“</div>
+      <div class="founder-quote">
+        ...we have established a tradition of excellence and<br>
+        high academic standards and will work endlessly<br>
+        to retain our position as your ideal training destination.
+      </div>
+      <div class="founder-signature">FELIX OTIENO NGIGE</div>
+      <div class="founder-title">FOUNDER, CLIPS TECHNICAL COLLEGE</div>
+    </div>
+    <div class="principal-quote-container">
+      <img src="WhatsApp Image 2025-07-17 at 07.35.22.jpeg" alt="Principal" class="founder-profile-img">
+      <div class="founder-quote-mark">“</div>
+      <div class="founder-quote">
+        Our commitment is to empower every student with the skills and confidence<br>
+        to shape their own future and make a positive impact in the world.<br>
+        Welcome to a community of lifelong learners and achievers.
+      </div>
+      <div class="founder-signature">WALTER ODONGO</div>
+      <div class="founder-title">PRINCIPAL, CLIPS TECHNICAL COLLEGE</div>
+    </div>
+  </div>
+  <!-- End Founder Quote Section -->
 <div class="container2" style="position:relative;z-index:2;margin-top:2cm;">
 <div class="cuorse" style="margin-top:0;">
     <div class="d-flex flex-wrap gap-3 justify-content-center my-4">
@@ -165,8 +378,8 @@
           <img src="WhatsApp Image 2025-07-15 at 07.52.15.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
           <img src="WhatsApp Image 2025-07-15 at 07.52.16.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
         </div>
-        <h5 class="mt-2" style="color: rgba(225, 245, 2, 0.954);">Hairdressing</h5>
-        <p style=" font-weight: bold ;color: rgb(227, 7, 143);">
+        <h5 class="mt-2" style="color: rgba(240, 3, 3, 0.954);">Hairdressing</h5>
+        <p style=" font-weight: bold ;color: rgb(248, 244, 244);">
           Hairdressing teaches styling, cutting, coloring, and hair care techniques for professional salon careers.
         </p>
       </div>
@@ -177,8 +390,8 @@
           <img src="WhatsApp Image 2025-07-15 at 07.22.32.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
           <img src="WhatsApp Image 2025-07-15 at 07.57.56(1).jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
         </div>
-        <div><h5 class="mt-2" style="color: white;">COMPUTER OPERATOR</h5>
-        <p style="font-weight: bold ;color: rgb(220, 4, 181);">equips learners with practical skills in managing computer systems and performing routine IT tasks. 
+        <div><h5 class="mt-2" style="color: rgb(247, 4, 4);">COMPUTER OPERATOR</h5>
+        <p style="font-weight: bold ;color: rgb(253, 250, 250);">equips learners with practical skills in managing computer systems and performing routine IT tasks. 
           Students learn how to handle data entry, 
           troubleshoot basic hardware/software issues,
            and monitor system performance. The course also covers office applications,file management, and printing operations. It prepares graduates for roles in IT support, administrative offices, and data processing centers.</p>
@@ -192,8 +405,8 @@
           <img src="WhatsApp Image 2025-07-15 at 07.39.36.jpeg" alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
           <img src="WhatsApp Image 2025-07-15 at 07.39.37.jpeg " alt="Training Effective Workforce" class="img-fluid rounded slideshow-img hide" />
         </div>
-        <h5 class="mt-2" style="color: rgb(6, 223, 42);">CERTIFIED NURSING ASSISTANT </h5>
-        <p style=" font-weight: bold ;color: rgb(176, 62, 5);"> It trains students in hygiene assistance, mobility support, and vital signs monitoring.
+        <h5 class="mt-2" style="color: rgb(250, 4, 4);">CERTIFIED NURSING ASSISTANT </h5>
+        <p style=" font-weight: bold ;color: rgb(253, 250, 249);"> It trains students in hygiene assistance, mobility support, and vital signs monitoring.
 Learners gain hands-on experience in hospitals, elderly homes, and clinics.
 The course prepares graduates for direct entry into caregiving and nursing support roles.</p>
       </div>
@@ -278,14 +491,7 @@ The course prepares graduates for direct entry into caregiving and nursing suppo
     </div>
   </section>
   
-  <div class="Testimonials">
-    <div>
-      <div class="course-body">
-            <h5 class="fw-bold">DIRECTOR</h5>
-            <p>TOEFL is a standardized aptitude test that measures the English language proficiency of non-native speakers. It assesses reading, listening, speaking, and writing skills, and is widely accepted for university and visa applications globally.
-</p>
-    </div>
-  </div>
+ 
 
   <!-- Footer -->
   <!-- Footer Section -->
@@ -414,16 +620,6 @@ The course prepares graduates for direct entry into caregiving and nursing suppo
       const typewriter = document.getElementById('hero-typewriter');
       typeWriterEffect(heroSentences[0], typewriter);
       setInterval(showNextAnimeImageAndText, 4000); // Change every 4 seconds
-      // Slideshow for images in each .slideshow-wrapper (slow and smooth)
-      document.querySelectorAll('.container2 .slideshow-wrapper').forEach(function(wrapper) {
-        const slides = wrapper.querySelectorAll('.slideshow-img');
-        let current = 0;
-        setInterval(function() {
-          slides[current].classList.add('hide');
-          current = (current + 1) % slides.length;
-          slides[current].classList.remove('hide');
-        }, 4000); // Change every 4 seconds
-      });
     });
   </script>
 </body>
