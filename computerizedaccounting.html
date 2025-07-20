@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLIPS Technical College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafc;
+      color: #1e272e;
+    }
+    .hero {
+      height: 8cm;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+                  url('your-image.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      animation: fadeIn 2s ease-in;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .typed-text {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #ffd32a;
+      margin-top: 15px;
+      min-height: 40px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    }
+
+    .schools {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 60px 20px;
+    }
+
+    .school-card {
+      background: linear-gradient(to bottom right, #ffffff, #f1f2f6);
+      border-radius: 20px;
+      padding: 35px 25px;
+      width: 240px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #2f3542;
+      position: relative;
+      border: 2px solid transparent;
+    }
+
+    .school-card:hover {
+      transform: scale(1.08) rotate(0.5deg);
+      background: linear-gradient(to bottom right, #ffd32a, #f0932b);
+      color: white;
+      border: 2px solid #fff;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+
+    .school-card::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      bottom: 0;
+      left: 0;
+      background: #f0932b;
+      transition: width 0.3s;
+    }
+
+    .school-card:hover::after {
+      background: #fff;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .typed-text::after {
+      content: '|';
+      animation: blink 0.7s infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section (Typewriter effect, using original styles) -->
+  <div class="hero">
+    <h1>WELCOME TO CLIPS TECHNICAL COLLEGE</h1>
+    <div class="typed-text" id="typed"></div>
+  </div>
+
+  <!-- Schools Section (using original card styles) -->
+  <div class="schools">
+    <div class="school-card">SCHOOL OF BEAUTY</div>
+    <div class="school-card">SCHOOL OF BUSINESS</div>
+    <div class="school-card">SCHOOL OF LANGUAGES</div>
+    <div class="school-card">SCHOOL OF HEALTH SCIENCES</div>
+    <div class="school-card">SCHOOL OF IT</div>
+  </div>
+
+  <script>
+    const texts = [
+      "DEVELOP CHARACTER, SKILLS AND COMPITENCY",
+      "DISCOVER YOUR PASSION AND PERSUE YOUR DREAM",
+      "INNOVATE YOUR TOMMOROW"
+    ];
+    let count = 0, index = 0, currentText = '', letter = '';
+    function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.getElementById("typed").textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1800);
+      } else {
+        setTimeout(type, 50);
+      }
+    }
+    type();
+  </script>
+
+  <!-- Original Content Below -->
+  <div class="container py-5">
+    <!-- ...existing code... -->
+  <div class="container py-5">
+
+    <div class="section-title">
+      <h2>Course Overview</h2>
+    </div>
+    <p>The Computerized Accounting course is designed to equip learners with hands-on skills in accounting using popular software tools. It combines theoretical accounting principles with practical application using software like QuickBooks, Sage, and Excel. Students gain real-world skills for bookkeeping, payroll, taxation, and financial reporting.</p>
+
+    <div class="row text-center mt-4">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-header">Target Group</div>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <li><i class="icon-bullet">✔</i>Accounting students</li>
+              <li><i class="icon-bullet">✔</i>Business owners</li>
+              <li><i class="icon-bullet">✔</i>Finance clerks</li>
+              <li><i class="icon-bullet">✔</i>Job seekers in finance roles</li>
+              <li><i class="icon-bullet">✔</i>Professionals upgrading skills</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-header">Certification</div>
+          <div class="card-body">
+            <p><strong>Award:</strong> Certificate of Completion</p>
+            <p><strong>Requirement:</strong> Full attendance, assignments, and project submission</p>
+            <p><strong>Value:</strong> Demonstrates practical accounting software skills</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-header">Entry Requirements</div>
+          <div class="card-body">
+            <ul>
+              <li><strong>LEVEL:</strong> KCSE Certificate</li>
+              <li><strong>SKILLS:</strong> Basic computer literacy</li>
+              <li><strong>INTEREST:</strong> Passion for finance and accounting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center my-5">
+      <div class="col-md-6">
+        <h5>🕒 Full-Time</h5>
+        <p>2 Months Intensive Program</p>
+      </div>
+      <div class="col-md-6">
+        <h5>🕒 Part-Time</h5>
+        <p>3 Months (Evenings/Weekends)</p>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <h3>Course Content</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="module-box">
+          <p class="module-title">Module 1: Introduction to Accounting</p>
+          <ul>
+            <li>Principles of financial accounting</li>
+            <li>Double entry system</li>
+          </ul>
+        </div>
+        <div class="module-box">
+          <p class="module-title">Module 3: QuickBooks Essentials</p>
+          <ul>
+            <li>Company setup and chart of accounts</li>
+            <li>Invoices, payments, and reports</li>
+          </ul>
+        </div>
+        <div class="module-box">
+          <p class="module-title">Module 5: Tax and Payroll</p>
+          <ul>
+            <li>PAYE, VAT, and NSSF/NHIF entries</li>
+            <li>Generating payroll using software</li>
+          </ul>
+        </div>
+        <div class="module-box">
+          <p class="module-title">Module 7: Final Project</p>
+          <ul>
+            <li>Simulated business accounting</li>
+            <li>Financial reporting and analysis</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="module-box">
+          <p class="module-title">Module 2: Microsoft Excel for Accounts</p>
+          <ul>
+            <li>Spreadsheets and formulas</li>
+            <li>Budgeting templates and reconciliations</li>
+          </ul>
+        </div>
+        <div class="module-box">
+          <p class="module-title">Module 4: Sage Accounting</p>
+          <ul>
+            <li>Vendor and customer transactions</li>
+            <li>Bank reconciliation</li>
+          </ul>
+        </div>
+        <div class="module-box">
+          <p class="module-title">Module 6: Financial Statements</p>
+          <ul>
+            <li>Balance sheet and income statement</li>
+            <li>Trial balance preparation</li>
+          </ul>
+        </div>
+        <div class="module-box">
+          <p class="module-title">Module 8: Career & Entrepreneurship</p>
+          <ul>
+            <li>Freelance bookkeeping</li>
+            <li>Starting a small accounting firm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <h3>Career Progression</h3>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <h5>Job Roles</h5>
+        <ul>
+          <li>Accounts Assistant</li>
+          <li>Bookkeeper</li>
+          <li>Payroll Clerk</li>
+          <li>Finance Officer</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Advancement Paths</h5>
+        <ul>
+          <li>Diploma in Accounting or CPA</li>
+          <li>Senior Accountant roles</li>
+          <li>Self-employed Accounting Consultant</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-fee text-center p-4">
+      <h3>Course Fee</h3>
+      <h4>KES 15,000</h4>
+      <p>Includes course materials, software access, practice projects, and certificate of completion.</p>
+      <a href="https://forms.gle/CUsguHYq5a3A44C69" class="btn btn-warning">📝 Apply Now</a>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -19,6 +19,45 @@
   </style>
 </head>
 <body>
+  <!-- Hero Section (Typewriter effect, using original styles) -->
+  <div style="height:8cm; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('your-image.jpg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px; animation: fadeIn 2s ease-in;">
+    <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 10px; text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">WELCOME TO CLIPS TECHNICAL COLLEGE</h1>
+    <div id="typed" style="font-size: 1.5rem; font-weight: 500; color: #ffd32a; margin-top: 15px; min-height: 40px; text-shadow: 1px 1px 5px rgba(0,0,0,0.2);"></div>
+  </div>
+
+  <!-- Schools Section (using original card styles) -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 60px 20px;">
+    <div class="school-card">SCHOOL OF BEAUTY</div>
+    <div class="school-card">SCHOOL OF BUSINESS</div>
+    <div class="school-card">SCHOOL OF LANGUAGES</div>
+    <div class="school-card">SCHOOL OF HEALTH SCIENCES</div>
+    <div class="school-card">SCHOOL OF IT</div>
+  </div>
+
+  <script>
+    const texts = [
+      "DEVELOP CHARACTER, SKILLS AND COMPITENCY",
+      "DISCOVER YOUR PASSION AND PERSUE YOUR DREAM",
+      "INNOVATE YOUR TOMMOROW"
+    ];
+    let count = 0, index = 0, currentText = '', letter = '';
+    function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.getElementById("typed").textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1800);
+      } else {
+        setTimeout(type, 50);
+      }
+    }
+    type();
+  </script>
+
+  <!-- Original Content Below -->
   <div class="container py-5">
 
     <div class="section-title">
