@@ -3,158 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CLIPS Technical College</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Computerized Accounting Course</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f9fafc;
-      color: #1e272e;
-    }
-    .hero {
-      height: 8cm;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
-                  url('your-image.jpg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-      animation: fadeIn 2s ease-in;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-    }
-    .typed-text {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: #ffd32a;
-      margin-top: 15px;
-      min-height: 40px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-    }
-
-    .schools {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      padding: 60px 20px;
-    }
-
-    .school-card {
-      background: linear-gradient(to bottom right, #ffffff, #f1f2f6);
-      border-radius: 20px;
-      padding: 35px 25px;
-      width: 240px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: all 0.4s ease;
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #2f3542;
-      position: relative;
-      border: 2px solid transparent;
-    }
-
-    .school-card:hover {
-      transform: scale(1.08) rotate(0.5deg);
-      background: linear-gradient(to bottom right, #ffd32a, #f0932b);
-      color: white;
-      border: 2px solid #fff;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-      cursor: pointer;
-    }
-
-    .school-card::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 5px;
-      bottom: 0;
-      left: 0;
-      background: #f0932b;
-      transition: width 0.3s;
-    }
-
-    .school-card:hover::after {
-      background: #fff;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .typed-text::after {
-      content: '|';
-      animation: blink 0.7s infinite;
-    }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; background: #fff; }
+    h2, h3 { font-weight: 700; }
+    .section-title { border-left: 6px solid #f7b500; padding-left: 12px; margin-top: 40px; margin-bottom: 20px; }
+    .module-title { font-weight: 600; color: #002d72; }
+    .module-box { border-left: 3px solid #f7b500; padding-left: 10px; margin-bottom: 30px; }
+    .card-header { background-color: #002d72; color: white; font-weight: 600; }
+    .card-body ul { padding-left: 20px; }
+    .icon-bullet { margin-right: 10px; color: #002d72; }
+    .card-fee { background-color: #002d72; color: white; border-radius: 10px; }
+    .btn-warning { border-radius: 25px; padding: 10px 30px; }
   </style>
 </head>
 <body>
-
-  <!-- Hero Section (Typewriter effect, using original styles) -->
-  <div class="hero">
-    <h1>WELCOME TO CLIPS TECHNICAL COLLEGE</h1>
-    <div class="typed-text" id="typed"></div>
-  </div>
-
-  <!-- Schools Section (using original card styles) -->
-  <div class="schools">
-    <div class="school-card">SCHOOL OF BEAUTY</div>
-    <div class="school-card">SCHOOL OF BUSINESS</div>
-    <div class="school-card">SCHOOL OF LANGUAGES</div>
-    <div class="school-card">SCHOOL OF HEALTH SCIENCES</div>
-    <div class="school-card">SCHOOL OF IT</div>
-  </div>
-
-  <script>
-    const texts = [
-      "DEVELOP CHARACTER, SKILLS AND COMPITENCY",
-      "DISCOVER YOUR PASSION AND PERSUE YOUR DREAM",
-      "INNOVATE YOUR TOMMOROW"
-    ];
-    let count = 0, index = 0, currentText = '', letter = '';
-    function type() {
-      if (count === texts.length) count = 0;
-      currentText = texts[count];
-      letter = currentText.slice(0, ++index);
-      document.getElementById("typed").textContent = letter;
-      if (letter.length === currentText.length) {
-        count++;
-        index = 0;
-        setTimeout(type, 1800);
-      } else {
-        setTimeout(type, 50);
-      }
-    }
-    type();
-  </script>
-
-  <!-- Original Content Below -->
-  <div class="container py-5">
-    <!-- ...existing code... -->
   <div class="container py-5">
 
     <div class="section-title">
