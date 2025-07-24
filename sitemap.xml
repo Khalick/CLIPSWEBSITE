@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://clips.ac.ke/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://clips.ac.ke/course.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clips.ac.ke/form.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clips.ac.ke/schoolofbusiness.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clips.ac.ke/schoolofit.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clips.ac.ke/schoolofbeauty.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clips.ac.ke/schooloflanguages.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <!-- Add more URLs for each page as needed -->
+</urlset>
